@@ -1,16 +1,16 @@
 #pragma once
-#include <iostream>
-#include <cassert>
 #include "Point.h"
 
+enum CurveType {
+    CIRCLE,
+    ELLIPSE,
+    HELIX
+};
 
-class Curve {
-
+class Curve
+{
 public:
-    int objType;
-    virtual Point* getPoint(double t) = 0;
-    virtual void printCurveType() = 0;
-    virtual double getRadius() = 0;
-    virtual Point* deriv(double t) = 0; 
-    void printDeriv(Point* p);
+    virtual Point getPoint(const double t) const = 0;
+    virtual Point getDerivative(const double t) const = 0;
+    virtual CurveType getType() const = 0;
 };

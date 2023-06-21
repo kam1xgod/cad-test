@@ -1,16 +1,18 @@
 #pragma once
 #include <iostream>
 #include <cassert>
-#include "Curve.h"
+#include "Ellipse.h"
+#include "Point.h"
 
-class Circle : public Curve {
-private:
-    double r;
+class Circle : public Ellipse
+{
 public:
-    Circle(double _r);
+    Circle(double Radius, Point Center) : Ellipse(Radius, Radius, Center) 
+    {
 
-    Point* getPoint(double t);
-    void printCurveType();
-    double getRadius();
-    Point* deriv(double t);
+    }
+
+    double Radius();
+
+    CurveType getType() const override;
 };
