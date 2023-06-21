@@ -1,7 +1,8 @@
 #pragma once
 #include "Point.h"
 
-enum CurveType {
+enum class CurveType
+{
     CIRCLE,
     ELLIPSE,
     HELIX

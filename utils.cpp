@@ -4,7 +4,7 @@
 #include "Circle.h"
 #include "Point.h"
 
-void Fill_Random_Curves(std::vector<Curve*>& A, const int n)
+void fillRandomCurves(std::vector<Curve*>& A, const int n)
 {
     for (int i = 0; i < n; i++)
     {
@@ -19,7 +19,7 @@ void Fill_Random_Curves(std::vector<Curve*>& A, const int n)
     }
 }
 
-void Get_Curves_Info(std::vector<Curve*>& A, const double t)
+void getCurvesInfo(std::vector<Curve*>& A, const double t)
 {
     for (const auto figure : A)
     {
@@ -30,18 +30,18 @@ void Get_Curves_Info(std::vector<Curve*>& A, const double t)
     }
 }
 
-std::vector<Circle*> Get_Circles(std::vector<Curve*>& A)
+std::vector<Circle*> getCircles(std::vector<Curve*>& A)
 {
     std::vector<Circle*> A_Circles;
     for (const auto figure : A)
     {
-        if (figure->getType() == CIRCLE)
+        if (figure->getType() == CurveType::CIRCLE)
             A_Circles.push_back(dynamic_cast<Circle*>(figure));
     }
     return A_Circles;
 }
 
-void Sorting_Circles(std::vector<Circle*>& A)
+void sortingCircles(std::vector<Circle*>& A)
 {
     std::sort(A.begin(), A.end(), 
         [](Circle* a, Circle* b) {
@@ -49,7 +49,7 @@ void Sorting_Circles(std::vector<Circle*>& A)
         });
 }
 
-double Get_Sum(std::vector<Circle*>& A_Circles)
+double getSum(std::vector<Circle*>& A_Circles)
 {
     double sum = std::accumulate(A_Circles.begin(), A_Circles.end(), 0.0,
         [](double accumulator, Circle* circle) {
@@ -58,7 +58,7 @@ double Get_Sum(std::vector<Circle*>& A_Circles)
     return sum;
 }
 
-double Get_Quick_Sum(std::vector<Circle*>& A_Circles)
+double getQuickSum(std::vector<Circle*>& A_Circles)
 {
     double sum = 0.0;
     #pragma omp parallel for reduction(+:sum)
