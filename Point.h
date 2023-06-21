@@ -5,7 +5,6 @@
 #include <vector>
 #include <algorithm>
 #include <numeric>
-#include <omp.h>
 #include <stdexcept>
 
 struct Point
