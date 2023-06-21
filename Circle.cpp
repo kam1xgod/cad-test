@@ -8,5 +8,5 @@ double Circle::Radius()
 
 CurveType Circle::getType() const
 {
-    return CIRCLE;
+    return CurveType::CIRCLE;
 }

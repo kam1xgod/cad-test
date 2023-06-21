@@ -19,5 +19,5 @@ Point Ellipse::getDerivative(double t) const
 
 CurveType Ellipse::getType() const
 {
-    return ELLIPSE;
+    return CurveType::ELLIPSE;
 }

@@ -19,5 +19,5 @@ Point Helix::getDerivative(const double t) const
 
 CurveType Helix::getType() const
 {
-    return HELIX;
+    return CurveType::HELIX;
 }
