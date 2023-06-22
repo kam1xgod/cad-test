@@ -1,8 +1,8 @@
-#include "utils.h"
-#include "Curve.h"
-#include "Helix.h"
-#include "Circle.h"
-#include "Point.h"
+#include "../headers/utils.h"
+#include "../headers/Curve.h"
+#include "../headers/Helix.h"
+#include "../headers/Circle.h"
+#include "../headers/Point.h"
 
 void fillRandomCurves(std::vector<Curve*>& A, const int n)
 {

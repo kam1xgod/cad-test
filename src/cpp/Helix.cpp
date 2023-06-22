@@ -1,5 +1,5 @@
-#include "Helix.h"
-#include "Point.h"
+#include "../headers/Helix.h"
+#include "../headers/Point.h"
 
 Point Helix::getPoint(const double t) const
 {

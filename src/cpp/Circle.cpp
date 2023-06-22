@@ -1,5 +1,5 @@
-#include "Circle.h"
-#include "Point.h"
+#include "../headers/Circle.h"
+#include "../headers/Point.h"
 
 double Circle::Radius()
 {

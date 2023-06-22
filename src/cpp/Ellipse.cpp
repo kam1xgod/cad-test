@@ -1,5 +1,5 @@
-#include "Ellipse.h"
-#include "Point.h"
+#include "../headers/Ellipse.h"
+#include "../headers/Point.h"
 
 Point Ellipse::getPoint(double t) const
 {

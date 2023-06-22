@@ -1,9 +1,9 @@
-#include "Curve.h"
-#include "Point.h"
-#include "Ellipse.h"
-#include "Circle.h"
-#include "Helix.h"
-#include "utils.h"
+#include "../headers/Curve.h"
+#include "../headers/Point.h"
+#include "../headers/Ellipse.h"
+#include "../headers/Circle.h"
+#include "../headers/Helix.h"
+#include "../headers/utils.h"
 #include <numbers>
 
 int main()
